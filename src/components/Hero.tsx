@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/bg.jpeg";
 
 const Hero = () => {
   const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-background/70 via-background/70 to-background/70" />
       </div>
 
       {/* Floating Elements */}
@@ -28,12 +28,22 @@ const Hero = () => {
         <motion.div
           className="absolute top-40 right-20 w-6 h-6 bg-accent rounded-full opacity-40"
           animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         />
         <motion.div
           className="absolute bottom-40 left-20 w-3 h-3 bg-primary rounded-full opacity-50"
           animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5,
+          }}
         />
       </div>
 
@@ -62,7 +72,7 @@ const Hero = () => {
             className="text-5xl md:text-7xl font-bold"
           >
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse">
-              Your Name
+              Ramkrishna
             </span>
           </motion.h1>
 
@@ -83,8 +93,9 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           >
-            Passionate about building scalable web applications with modern technologies. 
-            2+ years of experience creating real-world solutions with React, TypeScript, and Node.js.
+            Passionate about building scalable web applications with modern
+            technologies. 3+ years of experience creating real-world solutions
+            with React, TypeScript, and Node.js.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -94,18 +105,26 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6"
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="hero-gradient text-white font-semibold px-8 py-3 rounded-full glow-effect hover:hover-shadow transition-all duration-300"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Get In Touch
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="font-semibold px-8 py-3 rounded-full border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               View My Work
             </Button>
@@ -119,7 +138,7 @@ const Hero = () => {
             className="flex justify-center space-x-6 pt-8"
           >
             <motion.a
-              href="https://github.com"
+              href="https://github.com/ramkrishnajena/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
@@ -129,7 +148,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/ramkrishnajena/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
@@ -139,7 +158,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </motion.a>
             <motion.a
-              href="mailto:your.email@example.com"
+              href="mailto:contact@ramkrishnajena.com"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border hover:border-primary transition-all duration-300"
@@ -154,7 +173,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute top-[70vh] left-1/2 transform -translate-x-1/2"
         >
           <motion.button
             onClick={scrollToAbout}

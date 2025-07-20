@@ -7,26 +7,26 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com",
-      label: "GitHub"
+      href: "https://github.com/ramkrishnajena",
+      label: "GitHub",
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com",
-      label: "LinkedIn"
+      href: "https://linkedin.com/in/ramkrishnajena/",
+      label: "LinkedIn",
     },
     {
       icon: Mail,
-      href: "mailto:your.email@example.com",
-      label: "Email"
-    }
+      href: "mailto:contact@ramkrishnajena.com",
+      label: "Email",
+    },
   ];
 
   const quickLinks = [
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -50,12 +50,12 @@ const Footer = () => {
           >
             <h3 className="text-2xl font-bold">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                YourName
+                Ramkrishna Jena
               </span>
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              MERN Stack Developer passionate about building exceptional web experiences 
-              with modern technologies and clean code.
+              MERN Stack Developer passionate about building exceptional web
+              experiences with modern technologies and clean code.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -108,7 +108,7 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>your.email@example.com</p>
+              <p>contact@ramkrishnajena.com</p>
               <p>Available for freelance projects</p>
               <div className="flex items-center space-x-2 text-sm">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -127,11 +127,9 @@ const Footer = () => {
           className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-muted-foreground text-sm"
         >
           <p className="mb-4 md:mb-0">
-            © {currentYear} YourName. All rights reserved.
+            © {currentYear} Ramkrishna Jena. All rights reserved.
           </p>
-          <p className="flex items-center">
-            Built with <Heart className="w-4 h-4 mx-1 text-red-500" /> using React & TypeScript
-          </p>
+          <p className="flex items-center">Built using React & TypeScript</p>
         </motion.div>
       </div>
     </footer>

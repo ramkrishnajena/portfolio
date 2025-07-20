@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,16 +20,18 @@ const Contact = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -30,7 +40,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
       title: "Message Sent!",
@@ -41,7 +51,7 @@ const Contact = () => {
       name: "",
       email: "",
       subject: "",
-      message: ""
+      message: "",
     });
     setIsSubmitting(false);
   };
@@ -50,42 +60,42 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "contact@ramkrishnajena.com",
+      href: "mailto:contact@ramkrishnajena.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 7852999606",
+      href: "tel:+917852999606",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Your City, Country",
-      href: "#"
-    }
+      value: "Bangelore, India",
+      href: "#",
+    },
   ];
 
   const socialLinks = [
     {
       icon: Github,
       name: "GitHub",
-      href: "https://github.com",
-      color: "hover:text-gray-600"
+      href: "https://github.com/ramkrishnajena",
+      color: "hover:text-gray-600",
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      href: "https://linkedin.com",
-      color: "hover:text-blue-600"
+      href: "https://linkedin.com/in/ramkrishnajena/",
+      color: "hover:text-blue-600",
     },
-    {
-      icon: Twitter,
-      name: "Twitter",
-      href: "https://twitter.com",
-      color: "hover:text-blue-400"
-    }
+    // {
+    //   icon: Twitter,
+    //   name: "Twitter",
+    //   href: "https://twitter.com",
+    //   color: "hover:text-blue-400",
+    // },
   ];
 
   return (
@@ -101,8 +111,9 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, collaborating on interesting projects, 
-            or just having a chat about technology. Let's connect!
+            I'm always open to discussing new opportunities, collaborating on
+            interesting projects, or just having a chat about technology. Let's
+            connect!
           </p>
         </motion.div>
 
@@ -143,7 +154,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Input
                       name="subject"
@@ -154,7 +165,7 @@ const Contact = () => {
                       className="bg-background/50 border-border/50 focus:border-primary"
                     />
                   </div>
-                  
+
                   <div>
                     <Textarea
                       name="message"
@@ -166,7 +177,7 @@ const Contact = () => {
                       className="bg-background/50 border-border/50 focus:border-primary resize-none"
                     />
                   </div>
-                  
+
                   <Button
                     type="submit"
                     disabled={isSubmitting}
@@ -202,10 +213,13 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Let's start a conversation</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                Let's start a conversation
+              </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you have a project in mind, want to collaborate, or just want to say hello, 
-                I'd love to hear from you. Feel free to reach out through any of the channels below.
+                Whether you have a project in mind, want to collaborate, or just
+                want to say hello, I'd love to hear from you. Feel free to reach
+                out through any of the channels below.
               </p>
             </div>
 
@@ -229,7 +243,9 @@ const Contact = () => {
                           <info.icon className="w-6 h-6 text-primary" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-foreground">{info.title}</h4>
+                          <h4 className="font-semibold text-foreground">
+                            {info.title}
+                          </h4>
                           <p className="text-muted-foreground">{info.value}</p>
                         </div>
                       </div>
@@ -273,7 +289,9 @@ const Contact = () => {
             >
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">Available for new projects</span>
+                <span className="text-sm font-medium">
+                  Available for new projects
+                </span>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 I typically respond within 24 hours
