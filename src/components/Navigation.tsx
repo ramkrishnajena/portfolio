@@ -53,7 +53,7 @@ const Navigation = () => {
             onClick={() => scrollToSection("#home")}
           >
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              YourName
+              Ramkrishna Jena
             </span>
           </motion.div>
 

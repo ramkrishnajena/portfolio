@@ -74,7 +74,7 @@ const About = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate MERN stack developer with 2+ years of experience 
+                I'm a passionate MERN stack developer with 3+ years of experience 
                 creating robust, scalable web applications. My journey in tech has been 
                 driven by curiosity and a love for solving complex problems through elegant code.
               </p>
