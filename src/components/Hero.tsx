@@ -15,7 +15,10 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-background/70 via-background/70 to-background/70" />
+        <div
+          className="absolute inset-0 bg-gradient-to-tr 
+from-black/70 via-black/60 to-transparent"
+        />
       </div>
 
       {/* Floating Elements */}
@@ -59,7 +62,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg text-muted-foreground font-medium"
+            className="text-lg text-white text-muted-foreground font-medium"
           >
             Hello, I'm
           </motion.p>
@@ -81,9 +84,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-2xl md:text-3xl font-semibold text-foreground/90"
+            className="text-2xl md:text-3xl font-semibold text-white"
           >
-            MERN Stack Developer
+            Full Stack Developer
           </motion.h2>
 
           {/* Description */}
@@ -91,7 +94,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
             Passionate about building scalable web applications with modern
             technologies. 3.5+ years of experience creating real-world solutions

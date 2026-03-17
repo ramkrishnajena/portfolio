@@ -52,7 +52,7 @@ const Navigation = () => {
             className="font-bold text-xl cursor-pointer"
             onClick={() => scrollToSection("#home")}
           >
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-gray-50">
               Ramkrishna Jena
             </span>
           </motion.div>
@@ -66,7 +66,7 @@ const Navigation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium relative group"
+                className="text-gray-50 hover:text-primary transition-colors duration-200 font-medium relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
