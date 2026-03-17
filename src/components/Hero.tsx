@@ -94,8 +94,8 @@ const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           >
             Passionate about building scalable web applications with modern
-            technologies. 3+ years of experience creating real-world solutions
-            with React, TypeScript, and Node.js.
+            technologies. 3.5+ years of experience creating real-world solutions
+            with React, TypeScript and Node.js.
           </motion.p>
 
           {/* CTA Buttons */}
