@@ -95,7 +95,7 @@ const Hero = () => {
           >
             Passionate about building scalable web applications with modern
             technologies. 3.5+ years of experience creating real-world solutions
-            with React, TypeScript and Node.js.
+            with React, TypeScript Angular.js and Node.js.
           </motion.p>
 
           {/* CTA Buttons */}
