@@ -57,7 +57,7 @@ const Footer = () => {
               MERN Stack Developer passionate about building exceptional web
               experiences with modern technologies and clean code.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
@@ -109,11 +109,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
               <p>contact@ramkrishnajena.com</p>
-              <p>Available for freelance projects</p>
-              <div className="flex items-center space-x-2 text-sm">
+              {/* <p>Available for freelance projects</p> */}
+              {/* <div className="flex items-center space-x-2 text-sm">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span>Currently open to work</span>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

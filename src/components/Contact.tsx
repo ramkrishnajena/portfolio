@@ -26,7 +26,7 @@ const Contact = () => {
   const { toast } = useToast();
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -237,16 +237,18 @@ const Contact = () => {
                   className="block"
                 >
                   <Card className="card-gradient card-shadow hover:hover-shadow transition-all duration-300 border-0 cursor-pointer">
-                    <CardContent className="p-4">
+                    <CardContent className="p-2 sm:p-4">
                       <div className="flex items-center space-x-4">
-                        <div className="p-3 rounded-full bg-primary/10">
-                          <info.icon className="w-6 h-6 text-primary" />
+                        <div className="p-2 sm:p-3 rounded-full bg-primary/10">
+                          <info.icon className="w-4 h-4 sm:w-6 sm:w-6 text-primary" />
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-foreground">
+                        <div className="flex flex-col items-start">
+                          <h4 className="font-semibold text-foreground text-sm sm:text-base">
                             {info.title}
                           </h4>
-                          <p className="text-muted-foreground">{info.value}</p>
+                          <p className="text-muted-foreground text-sm sm:text-base">
+                            {info.value}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -258,7 +260,7 @@ const Contact = () => {
             {/* Social Links */}
             <div className="pt-8">
               <h4 className="font-semibold text-lg mb-4">Follow me</h4>
-              <div className="flex space-x-4">
+              <div className="flex justify-center space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
@@ -280,7 +282,7 @@ const Contact = () => {
             </div>
 
             {/* Availability Status */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -296,7 +298,7 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground mt-2">
                 I typically respond within 24 hours
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

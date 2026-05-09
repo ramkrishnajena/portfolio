@@ -12,7 +12,7 @@ const Projects = () => {
       image: "/placeholder.svg",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
       github: "https://github.com",
-      live: "https://demo.com",
+      live: "#",
       category: "Full-Stack",
       icon: Globe
     },
